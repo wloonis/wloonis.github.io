@@ -1,0 +1,154 @@
+/* ─────────────────────────  Animal Counter — site  ───────────────────────── */
+:root {
+  --bg: #0f1115;
+  --bg-alt: #161922;
+  --surface: #1c2030;
+  --surface-2: #232838;
+  --text: #e8eaf0;
+  --text-dim: #a7adbd;
+  --accent: #2196f3;
+  --accent-2: #00897b;
+  --accent-grad: linear-gradient(135deg, #2196f3 0%, #00897b 100%);
+  --border: #2a3042;
+  --radius: 14px;
+  --maxw: 1040px;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { background: var(--surface-2); padding: 0.12em 0.4em; border-radius: 6px;
+  font-size: 0.88em; font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace; }
+
+/* ── Hero ── */
+.hero {
+  padding: 84px 20px 64px;
+  text-align: center;
+  background:
+    radial-gradient(1200px 400px at 50% -10%, rgba(33, 150, 243, 0.18), transparent 60%),
+    var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+.hero-inner { max-width: var(--maxw); margin: 0 auto; }
+.hero-eyebrow { color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 0.78rem; font-weight: 600; margin: 0 0 12px; }
+.hero h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); margin: 0 0 14px;
+  background: var(--accent-grad); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; }
+.hero-tagline { max-width: 720px; margin: 0 auto 28px; color: var(--text-dim);
+  font-size: 1.12rem; }
+.hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 11px 22px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  font-weight: 600; transition: transform 0.12s, background 0.15s; }
+.btn:hover { text-decoration: none; background: var(--surface-2); transform: translateY(-1px); }
+.btn-primary { background: var(--accent-grad); border: none; color: #fff; }
+.btn-primary:hover { filter: brightness(1.05); }
+
+/* ── Nav ── */
+.topnav { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 4px 18px; padding: 12px 16px; background: rgba(15, 17, 21, 0.85);
+  backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.topnav a { color: var(--text-dim); font-size: 0.92rem; font-weight: 500; padding: 4px 6px; }
+.topnav a:hover { color: var(--text); text-decoration: none; }
+
+/* ── Sections ── */
+.section { max-width: var(--maxw); margin: 0 auto; padding: 56px 20px; }
+.section.alt { background: var(--bg-alt); max-width: none; }
+.section.alt > * { max-width: var(--maxw); margin-left: auto; margin-right: auto; }
+.section h2 { font-size: 1.8rem; margin: 0 0 18px; padding-bottom: 8px;
+  border-bottom: 2px solid var(--border); display: inline-block; }
+.section h3 { font-size: 1.18rem; margin: 22px 0 10px; }
+.section p { color: var(--text-dim); }
+.section .lede { font-size: 1.06rem; }
+.caption { text-align: center; color: var(--text-dim); font-size: 0.9rem; margin-top: 12px; }
+.note { color: var(--text-dim); font-size: 0.92rem; }
+.small { font-size: 0.82rem; color: var(--text-dim); }
+ul.check { list-style: none; padding: 0; margin: 10px 0; }
+ul.check li { position: relative; padding-left: 26px; margin: 6px 0; color: var(--text-dim); }
+ul.check li::before { content: "✓"; position: absolute; left: 0; top: 0;
+  color: var(--accent-2); font-weight: 700; }
+
+/* ── Pipeline ── */
+.pipeline { display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+  justify-content: center; margin-top: 28px; }
+.pipe-step { display: flex; align-items: center; gap: 10px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; }
+.pipe-step small { color: var(--text-dim); }
+.pipe-ico { font-size: 1.5rem; }
+.pipe-arrow { color: var(--accent); font-size: 1.3rem; }
+
+/* ── Cards ── */
+.arch-grid, .companion-grid, .feature-grid, .gallery, .link-grid {
+  display: grid; gap: 18px; margin-top: 20px;
+}
+.arch-grid, .companion-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.feature-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.arch-card, .feature, .link-card { background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px; }
+.feature-ico { font-size: 1.8rem; margin-bottom: 6px; }
+.feature h3 { margin-top: 0; }
+.arch-card ul, .companion-grid ul { color: var(--text-dim); padding-left: 18px; }
+.link-card { display: block; text-decoration: none; color: var(--text); transition: transform 0.12s, border-color 0.15s; }
+.link-card:hover { transform: translateY(-2px); border-color: var(--accent); text-decoration: none; }
+.link-card span { display: block; color: var(--text-dim); font-size: 0.9rem; margin-top: 4px; }
+.link-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+/* ── Gallery ── */
+.gallery { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.gallery figure { margin: 0; }
+
+/* ── Media placeholders ──
+   Zones prêtes pour des médias à venir. Chaque .media-placeholder est un cadre
+   pointillé ; pour ajouter un média, déposez le fichier dans assets/ puis
+   remplacez le bloc par le <img>/<video> indiqué en commentaire HTML. */
+.media-placeholder {
+  border: 2px dashed var(--border); border-radius: var(--radius);
+  background: repeating-linear-gradient(45deg, var(--surface), var(--surface) 12px,
+    var(--surface-2) 12px, var(--surface-2) 24px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; min-height: 220px; padding: 24px; text-align: center;
+}
+.media-placeholder.wide { min-height: 300px; max-width: 720px; margin: 24px auto 0; }
+.media-placeholder.video, .gallery .video { border-color: var(--accent); }
+.ph-label { font-size: 1.05rem; font-weight: 600; color: var(--text); }
+.ph-hint { font-size: 0.82rem; color: var(--text-dim); font-family: ui-monospace, monospace; }
+figure.card figcaption { color: var(--text-dim); font-size: 0.88rem; margin-top: 10px; }
+
+/* Real media (when added) */
+.media-placeholder :is(img, video),
+.gallery :is(img, video) { max-width: 100%; height: auto; border-radius: 10px; display: block; }
+
+/* ── Footer ── */
+footer { border-top: 1px solid var(--border); padding: 28px 20px; text-align: center;
+  color: var(--text-dim); background: var(--bg-alt); }
+footer a { color: var(--accent); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .hero { padding: 64px 18px 48px; }
+  .section { padding: 44px 18px; }
+  .pipe-step { padding: 10px 12px; font-size: 0.92rem; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn:hover, .link-card:hover { transform: none; }
+}
