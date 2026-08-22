@@ -35,6 +35,15 @@ a:hover { text-decoration: underline; }
 code { background: var(--surface-2); padding: 0.12em 0.4em; border-radius: 6px;
   font-size: 0.88em; font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace; }
 
+/* ── Repo banner (tout en haut) ── */
+.repo-banner { display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: center; gap: 8px; padding: 10px 16px;
+  background: var(--accent-grad); color: #fff; font-size: 0.92rem; text-align: center; }
+.repo-banner a { color: #fff; font-weight: 600; text-decoration: underline; }
+.repo-banner a:hover { text-decoration: underline; }
+.repo-banner .sep { opacity: 0.7; }
+.gh-ico { vertical-align: -2px; margin-right: 6px; }
+
 /* ── Hero ── */
 .hero {
   padding: 84px 20px 64px;

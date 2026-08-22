@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Animal Counter — Comptage de porcs sur NVIDIA Jetson Orin Nano</title>
-  <meta name="description" content="Animal Counter : comptage temps réel de porcs par caméra fixe sur NVIDIA Jetson Orin Nano (YOLO/TensorRT + OC-SORT), déployé en K3s. Application Android + companion Jetson." />
+  <title>Animal Counter — Comptage d'animaux sur NVIDIA Jetson Orin Nano</title>
+  <meta name="description" content="Animal Counter : comptage temps réel d'animaux (cochons, moutons, vaches, volailles…) par caméra fixe sur NVIDIA Jetson Orin Nano (YOLO/TensorRT + OC-SORT), déployé en K3s. Application Android + companion Jetson. Open source." />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐷</text></svg>" />
 </head>
 <body>
+  <div class="repo-banner">
+    <span>⭐ <strong>Open source</strong> — tout le code est sur GitHub :</span>
+    <a href="https://github.com/wloonis/animal-counter" target="_blank" rel="noopener">animal-counter</a>
+    <span class="sep">·</span>
+    <a href="https://github.com/wloonis/animal-counter-companion" target="_blank" rel="noopener">animal-counter-companion</a>
+  </div>
+
   <header class="hero">
     <div class="hero-inner">
       <p class="hero-eyebrow">NVIDIA Jetson Orin Nano · K3s · OC-SORT</p>
       <h1>Animal Counter</h1>
       <p class="hero-tagline">
-        Comptage temps réel de porcs par caméra fixe — détections YOLO/TensorRT,
+        Comptage temps réel d'<strong>animaux</strong> par caméra fixe — détections YOLO/TensorRT,
         suivi OC-SORT avec gardes anti-inversion d'ID, et compteur net
-        bidirectionnel (+1 droite→gauche, −1 gauche→droite).
+        bidirectionnel. Conçu pour <strong>tout animal</strong> détecté par le modèle :
+        <em>cochons, moutons, vaches, volailles…</em> (+1 droite→gauche, −1 gauche→droite).
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://github.com/wloonis/animal-counter" target="_blank" rel="noopener">Comptage (companion core)</a>
+        <a class="btn btn-primary" href="https://github.com/wloonis/animal-counter" target="_blank" rel="noopener"><svg class="gh-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> Voir le code (comptage)</a>
         <a class="btn" href="https://github.com/wloonis/animal-counter-companion" target="_blank" rel="noopener">App Android + companion</a>
       </div>
     </div>
@@ -41,9 +49,10 @@
       <h2>Aperçu</h2>
       <p>
         Une caméra <strong>fixe</strong> pointe vers une ligne de comptage. Chaque
-        porc qui la traverse est suivi par <strong>OC-SORT</strong> (avec des
+        animal qui la traverse est suivi par <strong>OC-SORT</strong> (avec des
         gardes personnalisés anti-inversion d'ID) et le système maintient un
-        <strong>compteur net bidirectionnel</strong>. Un clip vidéo est enregistré
+        <strong>compteur net bidirectionnel</strong>. Conçu pour <strong>toute espèce</strong>
+        détectée par le modèle YOLO entraîné (cochons, moutons, vaches, volailles…). Un clip vidéo est enregistré
         automatiquement à chaque détection et s'arrête après ~2 min sans
         détection. Conçu pour un usage quotidien (allumé le matin, compteur à 0,
         éteint le soir) ou en continu 24/7 (le compteur s'accumule, réinitialisable
@@ -327,7 +336,7 @@
 
   <footer>
     <p>
-      Animal Counter · comptage de porcs sur NVIDIA Jetson Orin Nano / K3s ·
+      Animal Counter · comptage d'animaux sur NVIDIA Jetson Orin Nano / K3s ·
       <a href="https://github.com/wloonis" target="_blank" rel="noopener">github.com/wloonis</a>
     </p>
     <p class="small">Site statique GitHub Pages. Médias à venir dans <code>assets/</code>.</p>
