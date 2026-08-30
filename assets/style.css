@@ -162,6 +162,38 @@ footer a { color: var(--accent); }
   .btn:hover, .link-card:hover { transform: none; }
 }
 
+/* ──────────────────── i18n anti-flash + lang switch ──────────────────── */
+html.i18n-loading body { visibility: hidden; }
+.lang-switch {
+  margin-left: auto;
+  display: inline-flex;
+  gap: 2px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px;
+}
+.lang-switch button {
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button.active {
+  background: var(--accent);
+  color: #fff;
+}
+@media (max-width: 720px) {
+  .lang-switch { margin-left: 0; }
+}
+
 /* ───────────────────────── Démo ──────────────────────────── */
 .demo-grid {
   display: grid;

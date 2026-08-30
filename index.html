@@ -7,10 +7,11 @@
   <meta name="description" content="Animal Counter : comptage temps réel d'animaux (cochons, moutons, vaches, volailles…) par caméra fixe sur NVIDIA Jetson Orin Nano (YOLO/TensorRT + OC-SORT), déployé en K3s. Application Android + companion Jetson. Open source." />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐷</text></svg>" />
+  <script>document.documentElement.classList.add('i18n-loading');</script>
 </head>
 <body>
   <div class="repo-banner">
-    <span>⭐ <strong>Open source</strong> — tout le code est sur GitHub :</span>
+    <span data-i18n="banner.text">⭐ <strong>Open source</strong> — tout le code est sur GitHub :</span>
     <a href="https://github.com/wloonis/animal-counter" target="_blank" rel="noopener">animal-counter</a>
     <span class="sep">·</span>
     <a href="https://github.com/wloonis/animal-counter-companion" target="_blank" rel="noopener">animal-counter-companion</a>
@@ -20,35 +21,39 @@
     <div class="hero-inner">
       <p class="hero-eyebrow">NVIDIA Jetson Orin Nano · K3s · OC-SORT</p>
       <h1>Animal Counter</h1>
-      <p class="hero-tagline">
+      <p class="hero-tagline" data-i18n="hero.tagline">
         Comptage temps réel d'<strong>animaux</strong> par caméra fixe — détections YOLO/TensorRT,
         suivi OC-SORT avec gardes anti-inversion d'ID, et compteur net
         bidirectionnel. Conçu pour <strong>tout animal</strong> détecté par le modèle :
         <em>cochons, moutons, vaches, volailles…</em> (+1 droite→gauche, −1 gauche→droite).
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://github.com/wloonis/animal-counter" target="_blank" rel="noopener"><svg class="gh-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> Voir le code (comptage)</a>
-        <a class="btn" href="https://github.com/wloonis/animal-counter-companion" target="_blank" rel="noopener">App Android + companion</a>
+        <a class="btn btn-primary" href="https://github.com/wloonis/animal-counter" target="_blank" rel="noopener"><svg class="gh-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> <span data-i18n="hero.cta.code">Voir le code (comptage)</span></a>
+        <a class="btn" href="https://github.com/wloonis/animal-counter-companion" target="_blank" rel="noopener"><span data-i18n="hero.cta.app">App Android + companion</span></a>
       </div>
     </div>
   </header>
 
   <nav class="topnav">
-    <a href="#overview">Aperçu</a>
-    <a href="#demo">Démo</a>
+    <a href="#overview" data-i18n="nav.overview">Aperçu</a>
+    <a href="#demo" data-i18n="nav.demo">Démo</a>
     <a href="#architecture">Architecture</a>
-    <a href="#features">Fonctionnalités</a>
+    <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
     <a href="#companion">Companion</a>
     <a href="#validation">Validation</a>
-    <a href="#gallery">Galerie</a>
-    <a href="#links">Liens</a>
+    <a href="#gallery" data-i18n="nav.gallery">Galerie</a>
+    <a href="#links" data-i18n="nav.links">Liens</a>
+    <div class="lang-switch" role="group" aria-label="Language / Langue">
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
   </nav>
 
   <main>
     <!-- ───────────────────────── Aperçu ───────────────────────── -->
     <section id="overview" class="section">
-      <h2>Aperçu</h2>
-      <p>
+      <h2 data-i18n="overview.h2">Aperçu</h2>
+      <p data-i18n="overview.p">
         Une caméra <strong>fixe</strong> pointe vers une ligne de comptage. Chaque
         animal qui la traverse est suivi par <strong>OC-SORT</strong> (avec des
         gardes personnalisés anti-inversion d'ID) et le système maintient un
@@ -60,44 +65,44 @@
         à la demande).
       </p>
       <div class="pipeline">
-        <div class="pipe-step"><span class="pipe-ico">📷</span><div><strong>Caméra fixe</strong><br><small>30 fps</small></div></div>
+        <div class="pipe-step"><span class="pipe-ico">📷</span><div data-i18n="pipe.cam"><strong>Caméra fixe</strong><br><small>30 fps</small></div></div>
         <div class="pipe-arrow">→</div>
         <div class="pipe-step"><span class="pipe-ico">🧠</span><div><strong>YOLO / TensorRT</strong><br><small>ONNX → engine</small></div></div>
         <div class="pipe-arrow">→</div>
-        <div class="pipe-step"><span class="pipe-ico">🔗</span><div><strong>OC-SORT</strong><br><small>+ gardes anti-ID-switch</small></div></div>
+        <div class="pipe-step"><span class="pipe-ico">🔗</span><div data-i18n="pipe.ocsort"><strong>OC-SORT</strong><br><small>+ gardes anti-ID-switch</small></div></div>
         <div class="pipe-arrow">→</div>
-        <div class="pipe-step"><span class="pipe-ico">🚪</span><div><strong>Ligne de comptage</strong><br><small>franchissement</small></div></div>
+        <div class="pipe-step"><span class="pipe-ico">🚪</span><div data-i18n="pipe.line"><strong>Ligne de comptage</strong><br><small>franchissement</small></div></div>
         <div class="pipe-arrow">→</div>
-        <div class="pipe-step"><span class="pipe-ico">🔢</span><div><strong>Compteur net</strong><br><small>+1 / −1</small></div></div>
+        <div class="pipe-step"><span class="pipe-ico">🔢</span><div data-i18n="pipe.counter"><strong>Compteur net</strong><br><small>+1 / −1</small></div></div>
       </div>
     </section>
 
     <!-- ───────────────────────── Démo ──────────────────────────── -->
     <section id="demo" class="section">
-      <h2>Démo en action</h2>
-      <p>
+      <h2 data-i18n="demo.h2">Démo en action</h2>
+      <p data-i18n="demo.p">
         Le compteur en marche réelle — la caméra fixe, la ligne de comptage (jaune),
         les pistes OC-SORT, et le compteur net qui évolue à chaque franchissement.
         Deux espèces, deux déploiements :
       </p>
       <div class="demo-grid">
         <figure class="demo-card">
-          <video controls muted loop preload="metadata" poster="" aria-label="Comptage de cochons">
+          <video controls muted loop preload="metadata" poster="" aria-label="Comptage de cochons" data-i18n-aria="demo.pig.aria">
             <source src="assets/videos/pig-demo.mp4" type="video/mp4" />
-            Votre navigateur ne prend pas en charge la vidéo.
+            <span data-i18n="demo.video.fallback">Votre navigateur ne prend pas en charge la vidéo.</span>
           </video>
-          <figcaption>
+          <figcaption data-i18n="demo.pig.fig">
             <span class="demo-emoji">🐷</span>
             <strong>Cochons</strong> — modèle 2 classes (humain / cochon),
             caméra USB, ligne verticale. Comptage droite→gauche (+1) / gauche→droite (−1).
           </figcaption>
         </figure>
         <figure class="demo-card">
-          <video controls muted loop preload="metadata" poster="" aria-label="Comptage de moutons">
+          <video controls muted loop preload="metadata" poster="" aria-label="Comptage de moutons" data-i18n-aria="demo.sheep.aria">
             <source src="assets/videos/sheep-demo.mp4" type="video/mp4" />
-            Votre navigateur ne prend pas en charge la vidéo.
+            <span data-i18n="demo.video.fallback">Votre navigateur ne prend pas en charge la vidéo.</span>
           </video>
-          <figcaption>
+          <figcaption data-i18n="demo.sheep.fig">
             <span class="demo-emoji">🐑</span>
             <strong>Moutons</strong> — vidéo source :
             <a href="https://zenodo.org/records/10400302" target="_blank" rel="noopener">Zenodo (record 10400302)</a>.
@@ -106,13 +111,13 @@
           </figcaption>
         </figure>
       </div>
-      <p class="demo-note"><em>Vidéos enregistrées automatiquement par le système à chaque détection.</em></p>
+      <p class="demo-note" data-i18n="demo.note"><em>Vidéos enregistrées automatiquement par le système à chaque détection.</em></p>
     </section>
 
     <!-- ─────────────────────── Architecture ─────────────────────── -->
     <section id="architecture" class="section alt">
       <h2>Architecture</h2>
-      <p>
+      <p data-i18n="arch.p">
         Le projet est réparti en <strong>deux dépôts</strong> qui communiquent
         <strong>uniquement via des fichiers partagés</strong> dans deux hostPaths
         (<code>/conf</code> pour la config/contrôle, <code>/files</code> pour les
@@ -123,24 +128,24 @@
       </p>
       <div class="arch-grid">
         <div class="arch-card">
-          <h3>Countingapp <small>(ce dépôt)</small></h3>
-          <p>Le cœur du comptage : tracking OC-SORT, pipeline de comptage,
+          <h3 data-i18n="arch.c1.h3">Countingapp <small>(ce dépôt)</small></h3>
+          <p data-i18n="arch.c1.p">Le cœur du comptage : tracking OC-SORT, pipeline de comptage,
           TensorRT, le pod K3s <code>countingapp</code> (DaemonSet), et le setup
           système/K3s/RTC du Jetson. Écrit la <code>counting-history.jsonl</code> +
           les vidéos dans <code>/files</code>, lit la config depuis <code>/conf</code>.</p>
-          <ul>
+          <ul data-i18n="arch.c1.ul">
             <li>Pipeline : détection → masquage zones → tracking → franchissement → compteur</li>
             <li>Hot-reload <code>runtime-settings.json</code> à idle (BL-86)</li>
             <li>Snapshot JPEG périodique vers <code>/files/snapshot.jpg</code></li>
           </ul>
         </div>
         <div class="arch-card">
-          <h3>Companion + App Android <small>(dépôt sœur)</small></h3>
-          <p>Le <em>Jetson companion</em> (service systemd Python sur le port 8090)
+          <h3 data-i18n="arch.c2.h3">Companion + App Android <small>(dépôt sœur)</small></h3>
+          <p data-i18n="arch.c2.p">Le <em>Jetson companion</em> (service systemd Python sur le port 8090)
           fait le pont HTTP entre l'app Android et les fichiers partagés. L'app
           mobile affiche les compteurs, l'historique, et pilote les réglages
           (classes, ligne, masques) à distance.</p>
-          <ul>
+          <ul data-i18n="arch.c2.ul">
             <li><code>GET/PUT /api/settings</code> → lit/écrit <code>/conf</code></li>
             <li><code>GET /api/snapshot</code> → sert l'aperçu caméra</li>
             <li>Édition visuelle des zones de masquage (dessin/déplacement/redimensionnement)</li>
@@ -151,47 +156,47 @@
 
     <!-- ─────────────────────── Fonctionnalités ──────────────────── -->
     <section id="features" class="section">
-      <h2>Fonctionnalités</h2>
+      <h2 data-i18n="features.h2">Fonctionnalités</h2>
       <div class="feature-grid">
         <div class="feature">
           <div class="feature-ico">🎚️</div>
-          <h3>Classes configurables (BL-78)</h3>
-          <p>Compte un sous-ensemble configurable des classes du modèle
+          <h3 data-i18n="feat1.h3">Classes configurables (BL-78)</h3>
+          <p data-i18n="feat1.p">Compte un sous-ensemble configurable des classes du modèle
           (multi-espèces). <strong>global = somme des sous-compteurs</strong>.
           Pilé depuis l'app, sans redémarrer le pod.</p>
         </div>
         <div class="feature">
           <div class="feature-ico">📏</div>
-          <h3>Ligne de comptage (BL-83)</h3>
-          <p>Orientation <code>vertical</code> | <code>horizontal</code> + décalage
+          <h3 data-i18n="feat2.h3">Ligne de comptage (BL-83)</h3>
+          <p data-i18n="feat2.p">Orientation <code>vertical</code> | <code>horizontal</code> + décalage
           signé (pourcentage du cadre), centré par défaut. Directionnels
           <em>UP/DOWN</em> pour une ligne horizontale.</p>
         </div>
         <div class="feature">
           <div class="feature-ico">🚫</div>
-          <h3>Zones de masquage (BL-87)</h3>
-          <p>Rectangles d'exclusion normalisés : les détections dont le centroïde
+          <h3 data-i18n="feat3.h3">Zones de masquage (BL-87)</h3>
+          <p data-i18n="feat3.p">Rectangles d'exclusion normalisés : les détections dont le centroïde
           tombe dans une zone sont droppées avant le tracking (pas de track → pas
           de comptage). Générique, toutes espèces.</p>
         </div>
         <div class="feature">
           <div class="feature-ico">🔄</div>
-          <h3>Hot-reload à idle (BL-86)</h3>
-          <p>Les réglages <code>/conf/runtime-settings.json</code> sont rechargés
+          <h3 data-i18n="feat4.h3">Hot-reload à idle (BL-86)</h3>
+          <p data-i18n="feat4.p">Les réglages <code>/conf/runtime-settings.json</code> sont rechargés
           <strong>en-processus</strong> à la prochaine fenêtre d'inactivité —
           aucun redémarrage de pod. Appliqués hors enregistrement.</p>
         </div>
         <div class="feature">
           <div class="feature-ico">📸</div>
-          <h3>Snapshot caméra (BL-88)</h3>
-          <p>La countingapp écrit une JPEG brute (<code>/files/snapshot.jpg</code>)
+          <h3 data-i18n="feat5.h3">Snapshot caméra (BL-88)</h3>
+          <p data-i18n="feat5.p">La countingapp écrit une JPEG brute (<code>/files/snapshot.jpg</code>)
           ~toutes les 5 s pour que le companion/ l'app affichent un aperçu live et
           permettent de dessiner les masques dessus.</p>
         </div>
         <div class="feature">
           <div class="feature-ico">🛡️</div>
-          <h3>Gardes anti-ID-switch</h3>
-          <p>OC-SORT + gardes personnalisés (<code>COUNTING_GUARD_MAX_AGE</code>,
+          <h3 data-i18n="feat6.h3">Gardes anti-ID-switch</h3>
+          <p data-i18n="feat6.p">OC-SORT + gardes personnalisés (<code>COUNTING_GUARD_MAX_AGE</code>,
           fenêtre de ré-association, hystérésis H=0). Compteur global +
           historique <code>counting-history.jsonl</code>.</p>
         </div>
@@ -200,8 +205,8 @@
 
     <!-- ─────────────────────── Companion ───────────────────────── -->
     <section id="companion" class="section alt">
-      <h2>Le companion &amp; l'app Android</h2>
-      <p class="lede">
+      <h2 data-i18n="comp.h2">Le companion &amp; l'app Android</h2>
+      <p class="lede" data-i18n="comp.lede">
         L'expérience opérateur se fait depuis un téléphone Android. Le
         <strong>companion Jetson</strong> (service systemd Python, port 8090) est
         le pont HTTP entre l'app et les fichiers partagés <code>/conf</code> +
@@ -211,8 +216,8 @@
       </p>
       <div class="companion-grid">
         <div>
-          <h3>L'app Android</h3>
-          <ul class="check">
+          <h3 data-i18n="comp.app.h3">L'app Android</h3>
+          <ul class="check" data-i18n="comp.app.ul">
             <li><strong>Dashboard</strong> — compteurs agrégés + sessions</li>
             <li><strong>Compteur live</strong> — compte net bidirectionnel en direct</li>
             <li><strong>Historique</strong> — liste des vidéos, téléchargement/ouverture</li>
@@ -223,10 +228,10 @@
           </ul>
         </div>
         <div>
-          <h3>Éditeur de zones de masquage</h3>
-          <p>Dans Réglages → <em>Zones de masquage</em> : capture de l'aperçu caméra
+          <h3 data-i18n="comp.editor.h3">Éditeur de zones de masquage</h3>
+          <p data-i18n="comp.editor.p">Dans Réglages → <em>Zones de masquage</em> : capture de l'aperçu caméra
           puis édition visuelle directe sur l'image :</p>
-          <ul class="check">
+          <ul class="check" data-i18n="comp.editor.ul">
             <li><strong>Dessiner</strong> une zone (glisser sur une zone vide)</li>
             <li><strong>Déplacer</strong> une zone (glisser à l'intérieur)</li>
             <li><strong>Étirer</strong> par bords/coins (glisser un bord ou un coin)</li>
@@ -234,7 +239,7 @@
             <li>Enregistrement via <code>PUT /api/settings</code> (validation stricte)</li>
             <li>Bascule d'overlay <em>Afficher les zones à l'écran</em></li>
           </ul>
-          <p class="note">Résilience réseau : l'IP Jetson caché est invalidée à la
+          <p class="note" data-i18n="comp.editor.note">Résilience réseau : l'IP Jetson caché est invalidée à la
           perte WiFi + retry sur erreur réseau — le basculement maison ↔ hotspot
           est robuste (PR #22).</p>
         </div>
@@ -245,7 +250,7 @@
         <!-- Pour ajouter une capture d'écran de l'app :
              <img src="assets/photos/app-settings-maskzones.png" alt="Éditeur de zones de masquage sur l'app Android" />
              (remplacer le bloc .media-placeholder ci-dessous par le <img>) -->
-        <span class="ph-label">📸 Capture d'écran de l'app — à ajouter</span>
+        <span class="ph-label" data-i18n="ph.app.label">📸 Capture d'écran de l'app — à ajouter</span>
         <span class="ph-hint">assets/photos/app-settings-maskzones.png</span>
       </div>
     </section>
@@ -253,7 +258,7 @@
     <!-- ─────────────────────── Validation ───────────────────────── -->
     <section id="validation" class="section">
       <h2>Validation</h2>
-      <p>
+      <p data-i18n="val.p">
         La logique de comptage est validée sur des vidéos de référence via
         <code>scripts/validate_on_jetson.sh</code> → <code>validation-report.json</code>.
         Le nombre d'animaux compté est comparé à la valeur attendue déduite du nom
@@ -271,10 +276,10 @@
                <source src="assets/videos/validation-counting.mp4" type="video/mp4" />
              </video>
              (remplacer le bloc .media-placeholder ci-dessous par le <video>) -->
-        <span class="ph-label">🎬 Vidéo de validation — à venir</span>
+        <span class="ph-label" data-i18n="ph.val.label">🎬 Vidéo de validation — à venir</span>
         <span class="ph-hint">assets/videos/validation-counting.mp4</span>
       </div>
-      <p class="caption">
+      <p class="caption" data-i18n="val.caption">
         La vidéo montrera un run de référence : détections, tracks, ligne de
         comptage, et le compteur net atteignant la valeur attendue.
       </p>
@@ -282,8 +287,8 @@
 
     <!-- ─────────────────────── Galerie ─────────────────────────── -->
     <section id="gallery" class="section alt">
-      <h2>Galerie</h2>
-      <p class="lede">
+      <h2 data-i18n="gal.h2">Galerie</h2>
+      <p class="lede" data-i18n="gal.lede">
         Emplacements préparés pour des vidéos et photos à ajouter ultérieurement.
         Chaque case indique le chemin de fichier attendu dans
         <code>assets/</code>.
@@ -292,47 +297,47 @@
         <!-- Photo 1 -->
         <figure class="media-placeholder card">
           <!-- <img src="assets/photos/frame-counting.jpg" alt="Comptage en action : ligne jaune + compteur" /> -->
-          <span class="ph-label">🖼️ Photo — comptage en action</span>
+          <span class="ph-label" data-i18n="gal.1.label">🖼️ Photo — comptage en action</span>
           <span class="ph-hint">assets/photos/frame-counting.jpg</span>
-          <figcaption>Ligne de comptage jaune + compteur net en overlay</figcaption>
+          <figcaption data-i18n="gal.1.fig">Ligne de comptage jaune + compteur net en overlay</figcaption>
         </figure>
         <!-- Photo 2 -->
         <figure class="media-placeholder card">
           <!-- <img src="assets/photos/mask-zones-overlay.jpg" alt="Zones de masquage sur l'aperçu" /> -->
-          <span class="ph-label">🖼️ Photo — zones de masquage</span>
+          <span class="ph-label" data-i18n="gal.2.label">🖼️ Photo — zones de masquage</span>
           <span class="ph-hint">assets/photos/mask-zones-overlay.jpg</span>
-          <figcaption>Overlay semi-transparent des zones exclues</figcaption>
+          <figcaption data-i18n="gal.2.fig">Overlay semi-transparent des zones exclues</figcaption>
         </figure>
         <!-- Video 1 -->
         <figure class="media-placeholder card video">
           <!-- <video controls preload="metadata" poster="assets/photos/clip1-poster.png"><source src="assets/videos/clip-pigs-crossing.mp4" type="video/mp4" /></video> -->
-          <span class="ph-label">🎬 Vidéo — franchissements</span>
+          <span class="ph-label" data-i18n="gal.3.label">🎬 Vidéo — franchissements</span>
           <span class="ph-hint">assets/videos/clip-pigs-crossing.mp4</span>
-          <figcaption>Clip auto-enregistré : animaux traversant la ligne</figcaption>
+          <figcaption data-i18n="gal.3.fig">Clip auto-enregistré : animaux traversant la ligne</figcaption>
         </figure>
         <!-- Video 2 -->
         <figure class="media-placeholder card video">
           <!-- <video controls preload="metadata" poster="assets/photos/clip2-poster.png"><source src="assets/videos/clip-multi-species.mp4" type="video/mp4" /></video> -->
-          <span class="ph-label">🎬 Vidéo — multi-espèces</span>
+          <span class="ph-label" data-i18n="gal.4.label">🎬 Vidéo — multi-espèces</span>
           <span class="ph-hint">assets/videos/clip-multi-species.mp4</span>
-          <figcaption>Comptage configurable (humain + porc)</figcaption>
+          <figcaption data-i18n="gal.4.fig">Comptage configurable (humain + porc)</figcaption>
         </figure>
         <!-- Photo 3 (libre) -->
         <figure class="media-placeholder card">
           <!-- <img src="assets/photos/.jpg" alt="" /> -->
-          <span class="ph-label">🖼️ Photo — emplacement libre</span>
+          <span class="ph-label" data-i18n="gal.5.label">🖼️ Photo — emplacement libre</span>
           <span class="ph-hint">assets/photos/</span>
-          <figcaption>À définir</figcaption>
+          <figcaption data-i18n="gal.5.fig">À définir</figcaption>
         </figure>
         <!-- Video 3 (libre) -->
         <figure class="media-placeholder card video">
           <!-- <video controls preload="metadata"><source src="assets/videos/.mp4" type="video/mp4" /></video> -->
-          <span class="ph-label">🎬 Vidéo — emplacement libre</span>
+          <span class="ph-label" data-i18n="gal.6.label">🎬 Vidéo — emplacement libre</span>
           <span class="ph-hint">assets/videos/</span>
-          <figcaption>À définir</figcaption>
+          <figcaption data-i18n="gal.6.fig">À définir</figcaption>
         </figure>
       </div>
-      <p class="note">
+      <p class="note" data-i18n="gal.note">
         Les emplacements <code>assets/photos/</code> et <code>assets/videos/</code>
         existent (vides). Déposez-y les fichiers puis décommentez la balise
         <code>&lt;img&gt;</code> / <code>&lt;video&gt;</code> correspondante dans
@@ -342,42 +347,44 @@
 
     <!-- ─────────────────────── Liens ───────────────────────────── -->
     <section id="links" class="section">
-      <h2>Liens &amp; documentation</h2>
+      <h2 data-i18n="links.h2">Liens &amp; documentation</h2>
       <div class="link-grid">
         <a class="link-card" href="https://github.com/wloonis/animal-counter" target="_blank" rel="noopener">
           <strong>animal-counter</strong>
-          <span>Cœur de comptage (OC-SORT, K3s, Jetson) — dépôt principal</span>
+          <span data-i18n="link1.span">Cœur de comptage (OC-SORT, K3s, Jetson) — dépôt principal</span>
         </a>
         <a class="link-card" href="https://github.com/wloonis/animal-counter-companion" target="_blank" rel="noopener">
           <strong>animal-counter-companion</strong>
-          <span>App Android + Jetson companion</span>
+          <span data-i18n="link2.span">App Android + Jetson companion</span>
         </a>
         <a class="link-card" href="https://github.com/wloonis/animal-counter/blob/main/docs/04_configuration.md" target="_blank" rel="noopener">
           <strong>Configuration</strong>
-          <span>Paramètres boot + réglages runtime hot-reloadés</span>
+          <span data-i18n="link3.span">Paramètres boot + réglages runtime hot-reloadés</span>
         </a>
         <a class="link-card" href="https://github.com/wloonis/animal-counter/blob/main/docs/IPC_CONTRACT.md" target="_blank" rel="noopener">
-          <strong>Contrat IPC</strong>
-          <span>Fichiers partagés /conf + /files (byte-identique)</span>
+          <strong data-i18n="link4.strong">Contrat IPC</strong>
+          <span data-i18n="link4.span">Fichiers partagés /conf + /files (byte-identique)</span>
         </a>
         <a class="link-card" href="https://github.com/wloonis/animal-counter-companion/blob/main/docs/02_android_app.md" target="_blank" rel="noopener">
-          <strong>App Android</strong>
-          <span>Build, install, éditeur de zones de masquage</span>
+          <strong data-i18n="link5.strong">App Android</strong>
+          <span data-i18n="link5.span">Build, install, éditeur de zones de masquage</span>
         </a>
         <a class="link-card" href="https://github.com/wloonis/animal-counter/blob/main/docs/06_validation.md" target="_blank" rel="noopener">
           <strong>Validation</strong>
-          <span>Vidéos de référence + validation-report</span>
+          <span data-i18n="link6.span">Vidéos de référence + validation-report</span>
         </a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>
+    <p data-i18n="footer.p">
       Animal Counter · comptage d'animaux sur NVIDIA Jetson Orin Nano / K3s ·
       <a href="https://github.com/wloonis" target="_blank" rel="noopener">github.com/wloonis</a>
     </p>
-    <p class="small">Site statique GitHub Pages. Médias à venir dans <code>assets/</code>.</p>
+    <p class="small" data-i18n="footer.small">Site statique GitHub Pages. Médias à venir dans <code>assets/</code>.</p>
   </footer>
+
+  <script src="assets/i18n.js"></script>
 </body>
 </html>
