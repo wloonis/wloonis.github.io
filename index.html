@@ -35,6 +35,7 @@
 
   <nav class="topnav">
     <a href="#overview">Aperçu</a>
+    <a href="#demo">Démo</a>
     <a href="#architecture">Architecture</a>
     <a href="#features">Fonctionnalités</a>
     <a href="#companion">Companion</a>
@@ -69,6 +70,41 @@
         <div class="pipe-arrow">→</div>
         <div class="pipe-step"><span class="pipe-ico">🔢</span><div><strong>Compteur net</strong><br><small>+1 / −1</small></div></div>
       </div>
+    </section>
+
+    <!-- ───────────────────────── Démo ──────────────────────────── -->
+    <section id="demo" class="section">
+      <h2>Démo en action</h2>
+      <p>
+        Le compteur en marche réelle — la caméra fixe, la ligne de comptage (jaune),
+        les pistes OC-SORT, et le compteur net qui évolue à chaque franchissement.
+        Deux espèces, deux déploiements :
+      </p>
+      <div class="demo-grid">
+        <figure class="demo-card">
+          <video controls muted loop preload="metadata" poster="" aria-label="Comptage de cochons">
+            <source src="assets/videos/pig-demo.mp4" type="video/mp4" />
+            Votre navigateur ne prend pas en charge la vidéo.
+          </video>
+          <figcaption>
+            <span class="demo-emoji">🐷</span>
+            <strong>Cochons</strong> — modèle 2 classes (humain / cochon),
+            caméra USB, ligne verticale. Comptage droite→gauche (+1) / gauche→droite (−1).
+          </figcaption>
+        </figure>
+        <figure class="demo-card">
+          <video controls muted loop preload="metadata" poster="" aria-label="Comptage de moutons">
+            <source src="assets/videos/sheep-demo.mp4" type="video/mp4" />
+            Votre navigateur ne prend pas en charge la vidéo.
+          </video>
+          <figcaption>
+            <span class="demo-emoji">🐑</span>
+            <strong>Moutons</strong> — modèle multi-classes (mouton / chèvre / chien),
+            flux drone 720p, TensorRT FP16 à imgsz=1280.
+          </figcaption>
+        </figure>
+      </div>
+      <p class="demo-note"><em>Vidéos enregistrées automatiquement par le système à chaque détection.</em></p>
     </section>
 
     <!-- ─────────────────────── Architecture ─────────────────────── -->
