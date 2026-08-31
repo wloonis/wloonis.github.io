@@ -37,11 +37,11 @@
   <nav class="topnav">
     <a href="#overview" data-i18n="nav.overview">Aperçu</a>
     <a href="#demo" data-i18n="nav.demo">Démo</a>
+    <a href="#hardware" data-i18n="nav.boitier">Le boîtier</a>
     <a href="#architecture">Architecture</a>
     <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
     <a href="#companion">Companion</a>
     <a href="#validation">Validation</a>
-    <a href="#gallery" data-i18n="nav.gallery">Galerie</a>
     <a href="#links" data-i18n="nav.links">Liens</a>
     <div class="lang-switch" role="group" aria-label="Language / Langue">
       <button type="button" data-lang="fr" aria-pressed="false">FR</button>
@@ -114,8 +114,31 @@
       <p class="demo-note" data-i18n="demo.note"><em>Vidéos enregistrées automatiquement par le système à chaque détection.</em></p>
     </section>
 
+    <!-- ───────────────────────── Le boîtier ─────────────────────── -->
+    <section id="hardware" class="section alt">
+      <h2 data-i18n="hw.h2">Le boîtier</h2>
+      <p data-i18n="hw.p">
+        Le cœur du système : un <strong>NVIDIA Jetson Orin Nano 8&nbsp;Go</strong> dans un
+        boîtier compact, alimenté par un adaptateur USB-C, avec une caméra USB fixe
+        pointée vers la zone de comptage. Refroidissement passif (sans ventilateur),
+        silencieux, conçu pour tourner 24/7 dans un bâtiment d'élevage. Le système
+        démarre tout seul au branchement (K3s relève le pod de comptage) — un simple
+        on/off suffit.
+      </p>
+      <div class="hw-grid">
+        <figure class="hw-card">
+          <img src="assets/photos/boitier.jpg" alt="Boîtier fermé" loading="lazy" />
+          <figcaption data-i18n="hw.closed.fig">Boîtier fermé</figcaption>
+        </figure>
+        <figure class="hw-card">
+          <img src="assets/photos/boitier-ouvert.jpg" alt="Boîtier ouvert montrant le Jetson Orin Nano et la caméra USB" loading="lazy" />
+          <figcaption data-i18n="hw.open.fig">Boîtier ouvert — Jetson Orin Nano + caméra USB</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <!-- ─────────────────────── Architecture ─────────────────────── -->
-    <section id="architecture" class="section alt">
+    <section id="architecture" class="section">
       <h2>Architecture</h2>
       <p data-i18n="arch.p">
         Le projet est réparti en <strong>deux dépôts</strong> qui communiquent
@@ -155,7 +178,7 @@
     </section>
 
     <!-- ─────────────────────── Fonctionnalités ──────────────────── -->
-    <section id="features" class="section">
+    <section id="features" class="section alt">
       <h2 data-i18n="features.h2">Fonctionnalités</h2>
       <div class="feature-grid">
         <div class="feature">
@@ -204,7 +227,7 @@
     </section>
 
     <!-- ─────────────────────── Companion ───────────────────────── -->
-    <section id="companion" class="section alt">
+    <section id="companion" class="section">
       <h2 data-i18n="comp.h2">Le companion &amp; l'app Android</h2>
       <p class="lede" data-i18n="comp.lede">
         L'expérience opérateur se fait depuis un téléphone Android. Le
@@ -245,18 +268,45 @@
         </div>
       </div>
 
-      <!-- Placeholder: capture d'écran de l'app (à ajouter) -->
-      <div class="media-placeholder wide" id="ph-app-screenshot">
-        <!-- Pour ajouter une capture d'écran de l'app :
-             <img src="assets/photos/app-settings-maskzones.png" alt="Éditeur de zones de masquage sur l'app Android" />
-             (remplacer le bloc .media-placeholder ci-dessous par le <img>) -->
-        <span class="ph-label" data-i18n="ph.app.label">📸 Capture d'écran de l'app — à ajouter</span>
-        <span class="ph-hint">assets/photos/app-settings-maskzones.png</span>
+      <h3 class="shots-title" data-i18n="comp.shots.title">L'app en images</h3>
+      <div class="app-shots">
+        <figure class="shot">
+          <img src="assets/photos/companion-dashboard.png" alt="Tableau de bord de l'app" loading="lazy" />
+          <figcaption data-i18n="shot.dashboard">Tableau de bord</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/photos/companion-counter.png" alt="Compteur live" loading="lazy" />
+          <figcaption data-i18n="shot.counter">Compteur live</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/photos/companion-session.png" alt="Détail d'une session" loading="lazy" />
+          <figcaption data-i18n="shot.session">Session</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/photos/companion-history.png" alt="Historique des clips vidéo" loading="lazy" />
+          <figcaption data-i18n="shot.history">Historique vidéo</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/photos/companion-video-detail.png" alt="Lecture d'un clip vidéo" loading="lazy" />
+          <figcaption data-i18n="shot.detail">Détail d'un clip</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/photos/companion-settings-1.png" alt="Écran de réglages" loading="lazy" />
+          <figcaption data-i18n="shot.settings1">Réglages (1)</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/photos/companion-settings-2.png" alt="Écran de réglages" loading="lazy" />
+          <figcaption data-i18n="shot.settings2">Réglages (2)</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/photos/companion-settings-3.png" alt="Éditeur de zones de masquage" loading="lazy" />
+          <figcaption data-i18n="shot.settings3">Réglages — zones de masquage</figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- ─────────────────────── Validation ───────────────────────── -->
-    <section id="validation" class="section">
+    <section id="validation" class="section alt">
       <h2>Validation</h2>
       <p data-i18n="val.p">
         La logique de comptage est validée sur des vidéos de référence via
@@ -282,66 +332,6 @@
       <p class="caption" data-i18n="val.caption">
         La vidéo montrera un run de référence : détections, tracks, ligne de
         comptage, et le compteur net atteignant la valeur attendue.
-      </p>
-    </section>
-
-    <!-- ─────────────────────── Galerie ─────────────────────────── -->
-    <section id="gallery" class="section alt">
-      <h2 data-i18n="gal.h2">Galerie</h2>
-      <p class="lede" data-i18n="gal.lede">
-        Emplacements préparés pour des vidéos et photos à ajouter ultérieurement.
-        Chaque case indique le chemin de fichier attendu dans
-        <code>assets/</code>.
-      </p>
-      <div class="gallery">
-        <!-- Photo 1 -->
-        <figure class="media-placeholder card">
-          <!-- <img src="assets/photos/frame-counting.jpg" alt="Comptage en action : ligne jaune + compteur" /> -->
-          <span class="ph-label" data-i18n="gal.1.label">🖼️ Photo — comptage en action</span>
-          <span class="ph-hint">assets/photos/frame-counting.jpg</span>
-          <figcaption data-i18n="gal.1.fig">Ligne de comptage jaune + compteur net en overlay</figcaption>
-        </figure>
-        <!-- Photo 2 -->
-        <figure class="media-placeholder card">
-          <!-- <img src="assets/photos/mask-zones-overlay.jpg" alt="Zones de masquage sur l'aperçu" /> -->
-          <span class="ph-label" data-i18n="gal.2.label">🖼️ Photo — zones de masquage</span>
-          <span class="ph-hint">assets/photos/mask-zones-overlay.jpg</span>
-          <figcaption data-i18n="gal.2.fig">Overlay semi-transparent des zones exclues</figcaption>
-        </figure>
-        <!-- Video 1 -->
-        <figure class="media-placeholder card video">
-          <!-- <video controls preload="metadata" poster="assets/photos/clip1-poster.png"><source src="assets/videos/clip-pigs-crossing.mp4" type="video/mp4" /></video> -->
-          <span class="ph-label" data-i18n="gal.3.label">🎬 Vidéo — franchissements</span>
-          <span class="ph-hint">assets/videos/clip-pigs-crossing.mp4</span>
-          <figcaption data-i18n="gal.3.fig">Clip auto-enregistré : animaux traversant la ligne</figcaption>
-        </figure>
-        <!-- Video 2 -->
-        <figure class="media-placeholder card video">
-          <!-- <video controls preload="metadata" poster="assets/photos/clip2-poster.png"><source src="assets/videos/clip-multi-species.mp4" type="video/mp4" /></video> -->
-          <span class="ph-label" data-i18n="gal.4.label">🎬 Vidéo — multi-espèces</span>
-          <span class="ph-hint">assets/videos/clip-multi-species.mp4</span>
-          <figcaption data-i18n="gal.4.fig">Comptage configurable (humain + porc)</figcaption>
-        </figure>
-        <!-- Photo 3 (libre) -->
-        <figure class="media-placeholder card">
-          <!-- <img src="assets/photos/.jpg" alt="" /> -->
-          <span class="ph-label" data-i18n="gal.5.label">🖼️ Photo — emplacement libre</span>
-          <span class="ph-hint">assets/photos/</span>
-          <figcaption data-i18n="gal.5.fig">À définir</figcaption>
-        </figure>
-        <!-- Video 3 (libre) -->
-        <figure class="media-placeholder card video">
-          <!-- <video controls preload="metadata"><source src="assets/videos/.mp4" type="video/mp4" /></video> -->
-          <span class="ph-label" data-i18n="gal.6.label">🎬 Vidéo — emplacement libre</span>
-          <span class="ph-hint">assets/videos/</span>
-          <figcaption data-i18n="gal.6.fig">À définir</figcaption>
-        </figure>
-      </div>
-      <p class="note" data-i18n="gal.note">
-        Les emplacements <code>assets/photos/</code> et <code>assets/videos/</code>
-        existent (vides). Déposez-y les fichiers puis décommentez la balise
-        <code>&lt;img&gt;</code> / <code>&lt;video&gt;</code> correspondante dans
-        <code>index.html</code> (les commentaires HTML montrent le markup exact).
       </p>
     </section>
 
