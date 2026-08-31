@@ -263,12 +263,19 @@ html.i18n-loading body { visibility: hidden; }
 /* ─────────────────── Companion — app screenshots ───────────── */
 .shots-title { margin: 32px 0 4px; font-size: 1.15rem; }
 .app-shots {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 16px;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 4px 2px 12px;
   margin-top: 14px;
+  scroll-snap-type: x mandatory;
 }
+.app-shots::-webkit-scrollbar { height: 8px; }
+.app-shots::-webkit-scrollbar-track { background: var(--bg-alt); border-radius: 4px; }
+.app-shots::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 4px; }
 .shot {
+  flex: 0 0 170px;
+  scroll-snap-align: start;
   margin: 0;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -284,12 +291,12 @@ html.i18n-loading body { visibility: hidden; }
   background: #000;
 }
 .shot figcaption {
-  padding: 9px 10px;
-  font-size: 0.82rem;
+  padding: 10px 12px;
+  font-size: 0.8rem;
   color: var(--text-dim);
-  text-align: center;
+  line-height: 1.35;
 }
 @media (max-width: 560px) {
-  .app-shots { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
+  .shot { flex: 0 0 140px; }
   .hw-grid { grid-template-columns: minmax(0, 280px); }
 }

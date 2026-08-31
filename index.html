@@ -41,7 +41,6 @@
     <a href="#architecture">Architecture</a>
     <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
     <a href="#companion">Companion</a>
-    <a href="#validation">Validation</a>
     <a href="#links" data-i18n="nav.links">Liens</a>
     <div class="lang-switch" role="group" aria-label="Language / Langue">
       <button type="button" data-lang="fr" aria-pressed="false">FR</button>
@@ -276,71 +275,42 @@
       <div class="app-shots">
         <figure class="shot">
           <img src="assets/photos/companion-dashboard.png" alt="Tableau de bord de l'app" loading="lazy" />
-          <figcaption data-i18n="shot.dashboard">Tableau de bord</figcaption>
+          <figcaption data-i18n="shot.dashboard">Tableau de bord — compteurs agrégés et sessions</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/photos/companion-counter.png" alt="Compteur live" loading="lazy" />
-          <figcaption data-i18n="shot.counter">Compteur live</figcaption>
+          <figcaption data-i18n="shot.counter">Compteur live — compte net bidirectionnel en direct</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/photos/companion-session.png" alt="Détail d'une session" loading="lazy" />
-          <figcaption data-i18n="shot.session">Session</figcaption>
+          <figcaption data-i18n="shot.session">Session — détail (compteurs, durée, clips)</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/photos/companion-history.png" alt="Historique des clips vidéo" loading="lazy" />
-          <figcaption data-i18n="shot.history">Historique vidéo</figcaption>
+          <figcaption data-i18n="shot.history">Historique — liste des clips enregistrés</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/photos/companion-video-detail.png" alt="Lecture d'un clip vidéo" loading="lazy" />
-          <figcaption data-i18n="shot.detail">Détail d'un clip</figcaption>
+          <figcaption data-i18n="shot.detail">Détail d'un clip — lecture d'une vidéo enregistrée</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/photos/companion-settings-1.png" alt="Écran de réglages" loading="lazy" />
-          <figcaption data-i18n="shot.settings1">Réglages (1)</figcaption>
+          <figcaption data-i18n="shot.settings1">Réglages — connexion Jetson + synchro heure</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/photos/companion-settings-2.png" alt="Écran de réglages" loading="lazy" />
-          <figcaption data-i18n="shot.settings2">Réglages (2)</figcaption>
+          <figcaption data-i18n="shot.settings2">Réglages — classes, ligne, sens de comptage</figcaption>
         </figure>
         <figure class="shot">
           <img src="assets/photos/companion-settings-3.png" alt="Éditeur de zones de masquage" loading="lazy" />
-          <figcaption data-i18n="shot.settings3">Réglages — zones de masquage</figcaption>
+          <figcaption data-i18n="shot.settings3">Réglages — éditeur visuel des zones de masquage</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ─────────────────────── Validation ───────────────────────── -->
-    <section id="validation" class="section alt">
-      <h2>Validation</h2>
-      <p data-i18n="val.p">
-        La logique de comptage est validée sur des vidéos de référence via
-        <code>scripts/validate_on_jetson.sh</code> → <code>validation-report.json</code>.
-        Le nombre d'animaux compté est comparé à la valeur attendue déduite du nom
-        de fichier. Mode <strong>standard</strong> (vidéo de référence unique) par
-        défaut ; <strong><code>--full</code></strong> (manifeste des vidéos
-        prioritaires) uniquement quand la branche touche au code de décision de
-        comptage. Voir
-        <a href="https://github.com/wloonis/animal-counter/blob/main/docs/06_validation.md" target="_blank" rel="noopener"><code>docs/06_validation.md</code></a>.
-      </p>
-
-      <!-- Placeholder: vidéo de validation (à ajouter) -->
-      <div class="media-placeholder video" id="ph-validation-video">
-        <!-- Pour ajouter la vidéo de validation :
-             <video controls preload="metadata" poster="assets/photos/validation-poster.png">
-               <source src="assets/videos/validation-counting.mp4" type="video/mp4" />
-             </video>
-             (remplacer le bloc .media-placeholder ci-dessous par le <video>) -->
-        <span class="ph-label" data-i18n="ph.val.label">🎬 Vidéo de validation — à venir</span>
-        <span class="ph-hint">assets/videos/validation-counting.mp4</span>
-      </div>
-      <p class="caption" data-i18n="val.caption">
-        La vidéo montrera un run de référence : détections, tracks, ligne de
-        comptage, et le compteur net atteignant la valeur attendue.
-      </p>
-    </section>
 
     <!-- ─────────────────────── Liens ───────────────────────────── -->
-    <section id="links" class="section">
+    <section id="links" class="section alt">
       <h2 data-i18n="links.h2">Liens &amp; documentation</h2>
       <div class="link-grid">
         <a class="link-card" href="https://github.com/wloonis/animal-counter" target="_blank" rel="noopener">
