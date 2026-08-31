@@ -234,7 +234,8 @@ html.i18n-loading body { visibility: hidden; }
 /* ───────────────────────── Le boîtier ─────────────────────── */
 .hw-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 280px));
+  justify-content: center;
   gap: 22px;
   margin-top: 24px;
 }
@@ -290,5 +291,5 @@ html.i18n-loading body { visibility: hidden; }
 }
 @media (max-width: 560px) {
   .app-shots { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
-  .hw-grid { grid-template-columns: 1fr; }
+  .hw-grid { grid-template-columns: minmax(0, 280px); }
 }

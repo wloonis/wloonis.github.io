@@ -120,10 +120,14 @@
       <p data-i18n="hw.p">
         Le cœur du système : un <strong>NVIDIA Jetson Orin Nano 8&nbsp;Go</strong> dans un
         boîtier compact, alimenté par un adaptateur USB-C, avec une caméra USB fixe
-        pointée vers la zone de comptage. Refroidissement passif (sans ventilateur),
-        silencieux, conçu pour tourner 24/7 dans un bâtiment d'élevage. Le système
-        démarre tout seul au branchement (K3s relève le pod de comptage) — un simple
-        on/off suffit.
+        pointée vers la zone de comptage. Le SoC est refroidi passivement (sans
+        ventilateur) ; un <strong>ventilateur d'extraction supplémentaire</strong> évacue
+        l'air du boîtier. Un <strong>module RTC DS3231</strong> conserve l'heure
+        entre les mises sous/hors tension. Le système démarre tout seul au
+        branchement (K3s relève le pod de comptage) — un simple on/off suffit.
+        Un <strong>écran tactile</strong> attaché permet de piloter le comptage
+        directement depuis le boîtier ; le pilotage est également possible depuis
+        l'<a href="#companion">application Android</a>.
       </p>
       <div class="hw-grid">
         <figure class="hw-card">

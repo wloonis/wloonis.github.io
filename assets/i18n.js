@@ -37,7 +37,7 @@ const I18N_EN = {
   "demo.sheep.aria": `Sheep counting`,
 
   "hw.h2": `The enclosure`,
-  "hw.p": `The system core: an <strong>NVIDIA Jetson Orin Nano 8&nbsp;GB</strong> in a compact enclosure, USB-C powered, with a fixed USB camera aimed at the counting zone. Fanless (passive cooling), silent, built to run 24/7 in a livestock building. The system boots itself on power (K3s brings up the counting pod) — a simple on/off is all it takes.`,
+  "hw.p": `The system core: an <strong>NVIDIA Jetson Orin Nano 8&nbsp;GB</strong> in a compact enclosure, USB-C powered, with a fixed USB camera aimed at the counting zone. The SoC is passively cooled (fanless); an <strong>additional extraction fan</strong> vents the air from the enclosure. A <strong>DS3231 RTC module</strong> keeps the time across power cycles. The system boots itself on power (K3s brings up the counting pod) — a simple on/off is all it takes. An attached <strong>touchscreen</strong> lets you drive the counting directly from the enclosure; control is also available from the <a href="#companion">Android app</a>.`,
   "hw.closed.fig": `Closed enclosure`,
   "hw.open.fig": `Open enclosure — Jetson Orin Nano + USB camera`,
 
